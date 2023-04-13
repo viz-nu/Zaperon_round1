@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-
+import {useNavigate } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     footer: {
         backgroundColor: 'white',
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Footer = () => {
+    let navigate = useNavigate();
     const classes = useStyles();
 
     return (
@@ -29,13 +30,16 @@ const Footer = () => {
                 Powered by Company
             </Typography>
             <div className={classes.links}>
-                <Link href="" color="inherit">
+                <Link color="blue">
                     Need Help
                 </Link>
-                <Link href="" color="inherit">
+                <Link color="blue">
                     Privacy Policy
                 </Link>
+
+
             </div>
+
         </footer>
     );
 };
